@@ -1,0 +1,30 @@
+# Trên Qt_designer
+
+Bước 1: Mở Qt_Designer vào tạo một form mới ( Main down )
+
+Bước 2: Cách chèn ảnh nền vào QT:
++ chuột phải chọn: Change stylesheet
++ kích vào add Resource chọn hình cái bút
++ kích vào hình tạo thư viện mới nhập picture ( tên thư viện )
++ sang ô bên cạnh chọn thư mục có hình dấu + rồi nhập pic ( tên path )
++ sau khi tạo xong kích chọn pic và chọn hình chèn vào ở giữa
+
+Bước 3: copy dòng lệnh sau và chèn vào Edit Style Sheet
+QMainWindow{
+ border-image:url(:/pic/image (5).png); # thay địa chỉ url bằng địa chỉ url của ảnh vừa chèn 
+background-color: rgb(0, 255, 255);
+}
+
+Bước 4: nhấn Apply + oke và ra ngoài form kích chuột file chọn remove tool bar
+
+# Sử dụng Pycharm để convert ( yều cầu biết add môi trường cho python trong pycharm )
+
+Bước 1: : Cài đặt thư viện PyQt5
+$ py -m pip install PyQt5 or $ pip install PyQt5
+
+Bước 2: convert filename.ui sang filename.py bằng syntax
+$ pyuic5 -x FILE_NAME.ui -o FILE_NAME.py # dành cho cover formt
+$ pyrcc5 -x file_name.prc -0 file_name_rc.py # dành cho cover image
+
+Bước 3 : Viết chương trình transform.py để giao tiếp giữa các ui
+# thao khảo code chương trình
